@@ -18,12 +18,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         Spinner genero = findViewById(R.id.spinner);
         genero.setOnItemSelectedListener(this);
+        Spinner comunidad = findViewById(R.id.spinnerComu);
+        comunidad.setOnItemSelectedListener(this);
 
-        String generos [] =
-                {"Hombre", "Mujer", "Helicoptero"};
+        String generos [] = {
+                "Hombre", "Mujer", "Helicoptero"
+        };
+        String comunidades [] = {
+          "Andalucia", "Aragon", "Asturias", "Islas Baleares", "Canarias", "Cantabria", "Castilla y Leon", "Castilla-La Mancha", "Comunidad Valenciana", "Extremadura", "Galicia", "Madrid", "Murcia", "Navarra", "Pais Vasco", "La Rioja", "Ceuta", "Melilla"
+        };
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, generos);
         genero.setAdapter(adapter);
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, comunidades);
+        comunidad.setAdapter(adapter1);
 
     }
 
