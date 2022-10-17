@@ -172,7 +172,7 @@
 
                 <EditText
                     android:id="@+id/editTextTextMultiLine"
-                    android:layout_width="350dp"
+                    android:layout_width="400dp"
                     android:layout_height="182dp"
                     android:layout_marginTop="10dp"
                     android:ems="10"
