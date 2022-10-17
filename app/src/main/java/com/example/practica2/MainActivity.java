@@ -7,12 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
     ImageButton avatar1, avatar2, avatar3, avatar4;
+    Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +34,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         avatar3.setOnClickListener(this);
         avatar4 = findViewById(R.id.avatar4);
         avatar4.setOnClickListener(this);
+
+        button = findViewById(R.id.button);
+        button.setOnClickListener(this);
 
     }
 
@@ -71,6 +77,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 avatar3.getBackground().setAlpha(128);
                 avatar4.getBackground().setAlpha(255);
                 break;
+            /*case R.id.button:
+                Toast toast = Toast.makeText(this, "Datos guardados", Toast.LENGTH_SHORT);
+                toast.show();
+                break;*/
         }
     }
 }
